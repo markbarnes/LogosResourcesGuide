@@ -72,7 +72,7 @@
 					$sql_where .= ' AND private=false';
 				}
 				//Class is in lookup table
-				if ($class == 'author' || $class == 'publisher' || $class == 'subject' || $class = 'trait') {
+				if ($class == 'author' || $class == 'publisher' || $class == 'subject' || $class == 'trait') {
 					$sql_select .= ", resources_{$plural_class} AS lookup";
 					$sql_where .= $use_resources_table ? " AND resources.resource_id=lookup.resource_id" : " AND resources_{$type}.resource_id=lookup.resource_id";
                 //Class is in resources table
